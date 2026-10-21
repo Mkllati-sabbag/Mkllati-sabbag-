@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a1a30">
+<meta name="description" content="مخللاتي وصباغ للعقارات والإعمار في حلب: خيارات سكنية واستثمارية، الإكساء الكامل والمقاولات، وخدمات للمغتربين.">
+<title>مخللاتي وصباغ | العقارات والإعمار في حلب</title>
+<style>
+:root{
+ --navy:#0a1a30;--navy2:#102744;--navy3:#16335a;--gold:#c9a45c;--gold2:#e8cf8f;--ivory:#f7f4ed;--ink:#273242;--muted:#6f7783;--line:#e8e4dc;
+ --img-logo:url(1-logo.png);--img-hero:url(2-hero.jpg);--img-about:url(6-about.jpg);
+ --img-s1:none;--img-s2:none;--img-s3:none;--img-s4:none;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{font-family:Tahoma,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.85}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer}
+.wrap{width:min(1160px,calc(100% - 32px));margin:auto}
+svg.i{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(10,26,48,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,164,92,.25)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand i{width:54px;height:54px;background:var(--img-logo) center/contain no-repeat;display:block;flex-shrink:0}
+.brand b{display:block;color:#fff;font-size:16px;line-height:1.3}
+.brand small{display:block;color:var(--gold);font-size:11.5px}
+nav{display:flex;gap:22px;font-size:14px;color:#dfe5ee}
+nav a{padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--gold2);border-color:var(--gold)}
+.menu-btn{display:none;background:none;border:1px solid rgba(201,164,92,.5);color:var(--gold2);padding:7px 13px;border-radius:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:700;font-size:14.5px;border:1.5px solid transparent;transition:.2s}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#14213a}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(201,164,92,.35)}
+.btn-line{border-color:var(--gold);color:var(--gold2)}
+.btn-line:hover{background:rgba(201,164,92,.12)}
+.btn-dark{background:var(--navy);color:#fff;border-color:var(--navy)}
+.btn-dark:hover{background:var(--navy3)}
+.btn-sm{padding:8px 16px;font-size:13px}
+
+/* hero */
+.hero{position:relative;color:#fff;background:linear-gradient(100deg,rgba(7,18,34,.94) 0%,rgba(10,26,48,.80) 45%,rgba(10,26,48,.35) 100%),var(--img-hero) center/cover no-repeat,var(--navy);overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:4px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hero-in{min-height:520px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px;padding:56px 0 64px}
+.hero h1{font-size:clamp(30px,4.6vw,52px);line-height:1.4;margin-bottom:6px}
+.hero h2{font-size:clamp(21px,3vw,32px);color:var(--gold2);font-weight:700;margin-bottom:16px}
+.hero h2::after{display:none}
+.hero p{max-width:540px;font-size:17px;color:#e7ebf2;margin-bottom:26px}
+.hero-logo{justify-self:center;width:min(330px,70%);aspect-ratio:1;background:var(--img-logo) center/contain no-repeat;filter:drop-shadow(0 14px 30px rgba(0,0,0,.55))}
+
+/* feature strip */
+.feat{margin-top:-34px;position:relative;z-index:3}
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.feat-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 16px;text-align:center;box-shadow:0 14px 36px rgba(10,26,48,.12)}
+.feat-card .ic{width:50px;height:50px;margin:0 auto 10px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:var(--gold2);font-size:24px}
+.feat-card h3{font-size:15.5px;color:var(--navy);line-height:1.5;margin-bottom:4px}
+.feat-card p{font-size:13px;color:var(--muted);line-height:1.7}
+
+/* sections */
+section{padding:72px 0}
+.soft{background:var(--ivory)}
+.head{text-align:center;max-width:680px;margin:0 auto 34px}
+.eyebrow{color:#9c7a32;font-size:13.5px;font-weight:700;letter-spacing:.3px}
+h2{font-size:clamp(26px,3.2vw,36px);color:var(--navy);line-height:1.4;margin:2px 0 8px}
+h2::after{content:"";display:block;width:70px;height:3px;margin:12px auto 0;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.head p{color:var(--muted)}
+
+/* properties carousel */
+.car-wrap{position:relative}
+.car{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 18px;scrollbar-width:none}
+.car::-webkit-scrollbar{display:none}
+.prop{flex:0 0 min(360px,82%);scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(10,26,48,.07)}
+.prop .ph{height:200px;background-size:cover;background-position:center;position:relative}
+.tag{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#14213a;font-size:12.5px;font-weight:700;padding:3px 14px;border-radius:999px}
+.ill{position:absolute;bottom:10px;left:10px;background:rgba(10,26,48,.82);color:#fff;font-size:11.5px;padding:2px 10px;border-radius:6px}
+.prop .bd{padding:18px}
+.prop h3{display:flex;align-items:center;gap:6px;color:var(--navy);font-size:17px;margin-bottom:6px}
+.prop h3 svg{color:var(--gold);font-size:18px}
+.prop p{color:var(--muted);font-size:14px;min-height:78px}
+.arrows{display:flex;gap:8px;justify-content:center;margin-top:8px}
+.arr{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--gold);background:#fff;color:var(--navy);display:grid;place-items:center;font-size:18px}
+.arr:hover{background:var(--navy);color:var(--gold2)}
+.more{text-align:center;margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+/* why us */
+.why{background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;padding:0;overflow:hidden}
+.why-in{display:grid;grid-template-columns:1.2fr .8fr;align-items:stretch}
+.why-img{order:2;min-height:340px;background:linear-gradient(90deg,rgba(10,26,48,0) 55%,var(--navy) 100%),var(--img-about) center/cover no-repeat}
+.why-txt{padding:54px 40px 54px max(16px,calc((100vw - 1160px)/2))!important}
+.why .eyebrow{color:var(--gold)}
+.why h2{color:#fff;text-align:right}
+.why h2::after{margin:12px 0 0;background:linear-gradient(90deg,var(--gold),transparent)}
+.why p.lead{color:#d7dde7;max-width:560px;margin-bottom:22px}
+.why-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.why-list div{border-top:2px solid var(--gold);padding-top:10px;font-size:13.5px;color:#d7dde7}
+.why-list b{display:block;color:var(--gold2);font-size:14.5px;margin-bottom:2px}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(10,26,48,.12);border-color:var(--gold)}
+.svc .top{height:92px;background:linear-gradient(135deg,var(--navy),var(--navy3));display:grid;place-items:center;color:var(--gold2);font-size:38px;position:relative}
+.svc .top::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.svc .bd{padding:18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.svc h3{color:var(--navy);font-size:16.5px;line-height:1.5}
+.svc p{color:var(--muted);font-size:13.5px;flex:1}
+.svc .btn{margin-top:8px;align-self:flex-start}
+
+/* contact */
+.contact{background:linear-gradient(135deg,var(--navy),#0c2140);color:#fff}
+.contact h2{color:#fff}
+.contact .head p{color:#c9d2df}
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.panel{background:rgba(255,255,255,.05);border:1px solid rgba(201,164,92,.35);border-radius:16px;padding:24px}
+.panel h3{color:var(--gold2);margin-bottom:12px;font-size:18px}
+.ci{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.ci:last-child{border:0}
+.ci span{display:block;font-size:12.5px;color:#aeb9c8}
+.ci strong{direction:ltr;display:inline-block;font-size:17px;color:#fff;letter-spacing:.3px}
+.ci a.go{color:var(--gold2);font-size:13px;font-weight:700;white-space:nowrap}
+.map{min-height:280px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#17335a,#0e2140);display:grid;place-items:center;text-align:center;padding:22px}
+.map iframe{width:100%;height:340px;border:0;border-radius:12px;touch-action:auto}
+.map.live{display:block;padding:0;min-height:0;background:none}
+.map .pin{font-size:44px;color:var(--gold2);margin:0 auto 6px;display:block}
+.map p{color:#c9d2df;font-size:14px;margin:4px 0 14px}
+.social{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.social a{border:1px solid rgba(201,164,92,.5);color:var(--gold2);border-radius:999px;padding:6px 16px;font-size:13.5px}
+
+footer{background:#06111f;color:#aab5c5;padding:34px 0 18px}
+.f-main{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid rgba(201,164,92,.25)}
+.f-main .brand b{font-size:15px}
+.f-links{display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px}
+.f-links a:hover{color:var(--gold2)}
+.f-copy{padding-top:14px;font-size:12.5px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.fab{position:fixed;bottom:16px;left:16px;z-index:40;background:#1f9d57;color:#fff;border-radius:999px;padding:11px 18px;font-weight:700;font-size:14px;box-shadow:0 10px 26px rgba(0,0,0,.35);display:flex;align-items:center;gap:8px}
+[hidden]{display:none!important}
+
+@media(max-width:960px){
+ .feat-grid{grid-template-columns:repeat(2,1fr)}
+ .svc-grid{grid-template-columns:repeat(2,1fr)}
+ .why-in{grid-template-columns:1fr}
+ .why-img{order:0;min-height:240px;background:linear-gradient(0deg,var(--navy) 0%,rgba(10,26,48,0) 45%),var(--img-about) center/cover no-repeat}
+ .why-txt{padding:10px 16px 44px!important}
+ .why-list{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+ nav{display:none;position:absolute;top:74px;right:16px;left:16px;background:var(--navy);border:1px solid rgba(201,164,92,.4);border-radius:12px;padding:14px;flex-direction:column;gap:6px}
+ nav.open{display:flex}
+ .menu-btn{display:block}
+ .nav>.btn{display:none}
+ .hero-in{grid-template-columns:1fr;padding:40px 0 60px;min-height:unset}
+ .hero-logo{order:-1;width:150px;justify-self:start}
+ section{padding:54px 0}
+ .c-grid{grid-template-columns:1fr}
+ .svc-grid{grid-template-columns:1fr}
+ .ci{flex-wrap:wrap}
+ .fab{bottom:12px;left:12px}
+}
+@media(max-width:430px){.feat-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+ <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+ <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></symbol>
+ <symbol id="i-tools" viewBox="0 0 24 24"><path d="M14 6a4 4 0 0 0 5 5l-9 9a2 2 0 0 1-3-3z"/><path d="M14 6l3-3 3 3-3 3"/></symbol>
+ <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M16 7l3 3M14 9l2 2"/></symbol>
+ <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+ <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol>
+ <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+ <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
+ <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+ <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+</svg>
+
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#home" aria-label="الرئيسية"><i></i><span><b>مخللاتي وصباغ</b><small>للعقارات والإعمار · حلب</small></span></a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">القائمة ☰</button>
+  <nav id="mainNav" aria-label="التنقل الرئيسي">
+   <a href="#home">الرئيسية</a><a href="#properties">العقارات</a><a href="#services">خدماتنا</a><a href="#about">من نحن</a><a href="#contact">اتصل بنا</a>
+  </nav>
+  <a class="btn btn-gold btn-sm" data-wa="مرحباً، أود الاستفسار عن خدماتكم">واتساب</a>
+ </div>
+</header>
+
+<main>
+<div class="hero" id="home"><div class="wrap hero-in">
+ <div>
+  <h1>مخللاتي وصباغ للعقارات والإعمار</h1>
+  <h2>الشريك العقاري الموثوق في حلب</h2>
+  <p>نقدّم أفضل الخيارات السكنية والاستثمارية في أرقى أحياء حلب، مع خدمة الإكساء الكامل ما بعد البيع.</p>
+  <a class="btn btn-gold" data-wa="مرحباً، أود التواصل مع المكتب"><svg class="i"><use href="#i-chat"/></svg> تواصل عبر واتساب مع المكتب مباشرة</a>
+ </div>
+ <div class="hero-logo" role="img" aria-label="شعار مخللاتي وصباغ"></div>
+</div></div>
+
+<div class="feat"><div class="wrap feat-grid">
+ <div class="feat-card"><div class="ic"><svg class="i"><use href="#i-home"/></svg></div><h3>عقارات مختارة في أرقى أحياء حلب</h3><p>فرص استثمارية وسكنية مميزة</p></div>
+ <div class="feat-card"><div class="ic"><svg class="i"><use href="#i-globe"/></svg></div><h3>خدمة المغتربين</h3><p>متابعة العقار وإدارته عن بُعد بكل سهولة ووضوح</p></div>
+ <div class="feat-card"><div class="ic"><svg class="i"><use href="#i-shield"/></svg></div><h3>اسم موثوق في سوق العقار الحلبي</h3><p>تواصل واضح وتفاصيل شفافة حتى التسليم</p></div>
+ <div class="feat-card"><div class="ic"><svg class="i"><use href="#i-tools"/></svg></div><h3>خدمة الإكساء الكامل والمقاولات</h3><p>تنفيذ بمعايير عالية وفق المواصفات المتفق عليها</p></div>
+</div></div>
+
+<section id="properties"><div class="wrap">
+ <div class="head"><div class="eyebrow">عقارات مختارة</div><h2>عقاراتنا المميزة</h2><p>مجموعة مختارة من العقارات في أرقى أحياء حلب. تواصل معنا للتأكد من الأسعار والتوافر وترتيب المعاينة.</p></div>
+ <div class="car-wrap">
+  <div class="car" id="car">
+   <article class="prop"><div class="ph" style="background-image:url(3-prop-1.jpg)" role="img" aria-label="صورة توضيحية للعقار"><span class="tag">للبيع</span><span class="ill">صورة توضيحية</span></div><div class="bd"><h3><svg class="i"><use href="#i-pin"/></svg>حي الإذاعة — شارع ميزر</h3><p>شقق فاخرة، 3 غرف نوم وصالون، مساحة 95 م²، وموقع هادئ بخصوصية كاملة.</p><a class="btn btn-dark btn-sm" data-wa="السلام عليكم، أود الاستفسار عن شقق حي الإذاعة">تفاصيل العقار ←</a></div></article>
+   <article class="prop"><div class="ph" style="background-image:url(4-prop-2.jpg)" role="img" aria-label="صورة توضيحية للعقار"><span class="tag">للإيجار أو للبيع</span><span class="ill">صورة توضيحية</span></div><div class="bd"><h3><svg class="i"><use href="#i-pin"/></svg>حديقة سيف</h3><p>شقق راقية للإيجار أو البيع، 4 غرف نوم وصالون كبير، في الطابق الثاني بواجهة أمامية مميزة.</p><a class="btn btn-dark btn-sm" data-wa="السلام عليكم، أود الاستفسار عن عقار حديقة سيف">تفاصيل العقار ←</a></div></article>
+   <article class="prop"><div class="ph" style="background-image:url(5-prop-3.jpg)" role="img" aria-label="صورة توضيحية للعقار"><span class="tag">للاستثمار</span><span class="ill">صورة توضيحية</span></div><div class="bd"><h3><svg class="i"><use href="#i-pin"/></svg>السليمانية والراشدين — طريق الشام</h3><p>استثمارات سكنية استراتيجية، أبنية مميزة، وفرص إنشائية. يرجى التواصل لمعرفة التفاصيل.</p><a class="btn btn-dark btn-sm" data-wa="السلام عليكم، أود الاستفسار عن الخيارات العقارية">تفاصيل العقار ←</a></div></article>
+  </div>
+  <div class="arrows"><button class="arr" id="pv" aria-label="السابق"><svg class="i"><use href="#i-right"/></svg></button><button class="arr" id="nx" aria-label="التالي"><svg class="i"><use href="#i-left"/></svg></button></div>
+ </div>
+ <div class="more"><a class="btn btn-line" style="color:#8a6a28;border-color:#c9a45c" data-wa="مرحباً، أرغب بمعرفة جميع العقارات المتاحة">عرض جميع العقارات عبر واتساب</a> <a class="btn btn-dark" id="fbBtn" hidden>تابع أحدث العروض على فيسبوك</a></div>
+</div></section>
+
+<section class="why" id="about"><div class="why-in">
+ <div class="why-img" role="img" aria-label="يد تحمل بيتاً ومفاتيح"></div>
+ <div class="why-txt wrap" style="width:auto;margin:0">
+  <div class="eyebrow">لماذا نحن؟</div>
+  <h2>ثقتك هي أساس نجاحنا</h2>
+  <p class="lead">اسم موثوق في سوق العقار الحلبي. نرافقك في استكشاف الخيارات العقارية، ونوفّر لك التواصل المباشر والمتابعة حتى التسليم، داخل سوريا وخارجها.</p>
+  <div class="why-list">
+   <div><b>خدمة متكاملة</b>من الاختيار حتى التسليم</div>
+   <div><b>تفاصيل واضحة</b>معلومات شفافة قبل أي التزام</div>
+   <div><b>معرفة بالسوق</b>خبرة بأحياء حلب وخياراتها</div>
+  </div>
+  <a class="btn btn-gold" href="#contact">تواصل معنا</a>
+ </div>
+</div></section>
+
+<section class="soft" id="services"><div class="wrap">
+ <div class="head"><div class="eyebrow">خدماتنا</div><h2>حلول متكاملة تلبّي احتياجاتك العقارية</h2></div>
+ <div class="svc-grid">
+  <article class="svc"><div class="top"><svg class="i"><use href="#i-compass"/></svg></div><div class="bd"><h3>استشارات عقارية</h3><p>نقدّم لك أفضل الخيارات السكنية والاستثمارية بحسب احتياجك.</p><a class="btn btn-dark btn-sm" data-wa="أرغب بالحصول على استشارة عقارية">التفاصيل ←</a></div></article>
+  <article class="svc"><div class="top"><svg class="i"><use href="#i-chat"/></svg></div><div class="bd"><h3>إدارة العقار عن بُعد</h3><p>متابعة ميدانية وتواصل دائم، ونعمل معك خطوة بخطوة.</p><a class="btn btn-dark btn-sm" data-wa="أرغب بالاستفسار عن إدارة العقار عن بعد">التفاصيل ←</a></div></article>
+  <article class="svc"><div class="top"><svg class="i"><use href="#i-tools"/></svg></div><div class="bd"><h3>الإكساء الكامل والمقاولات</h3><p>إكساء بحسب الاتفاق، وتسليم على الهيكل أو نصف جاهزة أو مكسوّة بالكامل.</p><a class="btn btn-dark btn-sm" data-wa="أرغب بالاستفسار عن خدمات الإكساء والمقاولات">التفاصيل ←</a></div></article>
+  <article class="svc"><div class="top"><svg class="i"><use href="#i-globe"/></svg></div><div class="bd"><h3>خدمة المغتربين</h3><p>متابعة العقارات وإدارتها عن بُعد بكل سهولة وشفافية.</p><a class="btn btn-dark btn-sm" data-wa="أقيم خارج سوريا وأرغب بالاستفسار عن خدماتكم">التفاصيل ←</a></div></article>
+ </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+ <div class="head"><div class="eyebrow" style="color:var(--gold)">نحن هنا لمساعدتك</div><h2>تواصل معنا الآن</h2><p>للاستفسار عن الخيارات المتاحة أو ترتيب معاينة، تواصل معنا من حلب أو من خارج سوريا.</p></div>
+ <div class="c-grid">
+  <div class="panel"><h3>قنوات التواصل</h3>
+   <div class="ci"><div><span>للمراسلة الفورية والطلبات (واتساب)</span><strong id="waShow">+963 962 567 724</strong></div><a class="go" data-wa="مرحباً، أود التواصل مع المكتب">راسلنا ←</a></div>
+   <div class="ci"><div><span>الاتصال المباشر والمعاينات — أبو النور</span><strong>0996509332</strong></div><a class="go" href="tel:0996509332">اتصل ←</a></div>
+   <div class="ci"><div><span>هاتف المكتب</span><strong>0215409163</strong></div><a class="go" href="tel:0215409163">اتصل ←</a></div>
+   <div class="social" id="social" hidden></div>
+  </div>
+  <div class="panel" id="location"><h3>موقع المكتب</h3>
+   <div class="map" id="mapBox"><div><svg class="i pin"><use href="#i-pin"/></svg><b>مكتبنا في حلب</b><p>افتح موقع المكتب على خرائط غوغل للحصول على الاتجاهات.</p><a class="btn btn-gold btn-sm" id="mapLink" target="_blank" rel="noopener">افتح الموقع على خرائط غوغل</a></div></div>
+  </div>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div class="f-main">
+  <a class="brand" href="#home"><i></i><span><b>مخللاتي وصباغ</b><small>للعقارات والإعمار · حلب</small></span></a>
+  <div class="f-links"><a href="#properties">العقارات</a><a href="#services">خدماتنا</a><a href="#about">من نحن</a><a href="#contact">اتصل بنا</a></div>
+ </div>
+ <div class="f-copy"><span>© <span id="year"></span> مخللاتي وصباغ للعقارات والإعمار</span><span>معاينة تصميم مقترحة وبانتظار اعتماد المكتب</span></div>
+</div></footer>
+
+<a class="fab" data-wa="مرحباً، أود الاستفسار"><svg class="i"><use href="#i-chat"/></svg> واتساب</a>
+
+<script>
+/* ===== إعدادات العميل (غيّر هذه القيم فقط) ===== */
+var WA_NUMBER = "963962567724";
+var INSTAGRAM = "mkhllati.sabbag";  /* اسم الحساب بدون @ ، اتركه فارغاً لإخفاء الزر */
+var FACEBOOK = "https://www.facebook.com/share/1C9oKpgsqX/"; /* رابط صفحة فيسبوك */
+var MAP_LINK = "https://goo.gl/maps/sVFnAfx78BZwHm2t6";      /* رابط الموقع على خرائط غوغل */
+var MAP_LAT = 36.2073, MAP_LNG = 37.1483; /* إحداثيات المكتب (خط العرض، خط الطول) */
+/* ================================================ */
+document.querySelectorAll("[data-wa]").forEach(function(a){
+  a.href="https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(a.getAttribute("data-wa"));
+  a.target="_blank";a.rel="noopener";
+});
+var so=[];if(INSTAGRAM)so.push('<a href="https://www.instagram.com/'+INSTAGRAM+'" target="_blank" rel="noopener">Instagram @'+INSTAGRAM+'</a>');
+if(FACEBOOK){so.push('<a href="'+FACEBOOK+'" target="_blank" rel="noopener">Facebook</a>');var fb=document.getElementById("fbBtn");fb.href=FACEBOOK;fb.target="_blank";fb.rel="noopener";fb.hidden=false;}
+if(so.length){var sc=document.getElementById("social");sc.hidden=false;sc.innerHTML=so.join("");}
+var ml=document.getElementById("mapLink");if(ml&&MAP_LINK)ml.href=MAP_LINK;
+if(MAP_LAT!==null&&MAP_LNG!==null){
+  document.getElementById("mapBox").className="map live";document.getElementById("mapBox").innerHTML='<iframe loading="lazy" title="الخريطة" src="https://maps.google.com/maps?q='+MAP_LAT+','+MAP_LNG+'&z=17&hl=ar&output=embed"></iframe>';
+  if(MAP_LINK){var pl=document.getElementById("mapBox").parentNode;var a=document.createElement("a");a.className="btn btn-gold btn-sm";a.style.marginTop="12px";a.textContent="فتح الاتجاهات على خرائط غوغل";a.href=MAP_LINK;a.target="_blank";a.rel="noopener";pl.appendChild(a);}}
+var btn=document.getElementById("menuBtn"),nav=document.getElementById("mainNav");
+btn.addEventListener("click",function(){var o=nav.classList.toggle("open");btn.setAttribute("aria-expanded",String(o));});
+nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("open");btn.setAttribute("aria-expanded","false");});});
+var car=document.getElementById("car");
+function step(d){car.scrollBy({left:d*(car.firstElementChild.offsetWidth+18),behavior:"smooth"});}
+document.getElementById("nx").addEventListener("click",function(){step(-1);});
+document.getElementById("pv").addEventListener("click",function(){step(1);});
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
